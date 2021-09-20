@@ -985,6 +985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abadb4ff3db51b40bd46b31d65d3379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputField: {fileID: 2117560777}
+  logoName: McDonald's
 --- !u!4 &1159459977
 Transform:
   m_ObjectHideFlags: 0
