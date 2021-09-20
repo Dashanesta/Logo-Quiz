@@ -11,7 +11,7 @@ Assets/AssetStoreTools*
 !/[Aa]ssets/**/*.meta
 
 # Plugins
-[Aa]ssets/Plugins/Editor/
+[Aa]ssets/Plugins/
 
 # Rider cache directory
 .idea/
