@@ -3,7 +3,15 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
 Assets/AssetStoreTools*
+
+# Never ignore Asset meta data
+!/[Aa]ssets/**/*.meta
+
+# Plugins
+[Aa]ssets/Plugins/Editor/
 
 # Rider cache directory
 .idea/
