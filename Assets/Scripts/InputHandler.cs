@@ -4,13 +4,20 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class InputHandler : MonoBehaviour
 {
     public TMP_InputField inputField;
     private string input;
-    public string logoName;
     public TMP_Text correctText;
+    public Image logo;
+    private string logoName;
+
+    private void Start()
+    {
+        logoName = logo.sprite.name;
+    }
 
     public void OnInput()
     {
