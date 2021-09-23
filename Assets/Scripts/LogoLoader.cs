@@ -12,12 +12,12 @@ public class LogoLoader: MonoBehaviour
 
     private void Start()
     {
-        if (SceneChanger.levelName == 0)
+        if (SceneChanger.level == 0)
         {
             McDonalds();
         }
         
-        if (SceneChanger.levelName == 1)
+        if (SceneChanger.level == 1)
         {
             Starbucks();
         }
