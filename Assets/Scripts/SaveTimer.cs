@@ -11,11 +11,6 @@ public class SaveTimer : MonoBehaviour
     public const string dataFileName = "PlayerData";
     public float SaveTime;
 
-    private void Start()
-    {
-        Controller.instance.starText.text = Controller.instance.data.stars.ToString();
-    }
-
     public static void SaveGame()
     {
         SaveSystem.SaveData(Controller.instance.data, dataFileName);

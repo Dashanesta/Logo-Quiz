@@ -14,18 +14,21 @@ public class SceneChanger : MonoBehaviour
    public void Back()
    {
        SceneManager.LoadScene("LevelSelector");
-       Controller.instance.starText.text = Controller.instance.data.stars.ToString();
    }
    
    public void McDonalds() // 0
    {
-        SceneManager.LoadScene("LevelTemplate");
-        level = 0;
+       level = 0;
+       SceneManager.LoadScene("LevelTemplate");
    }
    
    public void Starbucks() // 1
    {
-       SceneManager.LoadScene("LevelTemplate");
        level = 1;
+       if (Controller.instance.data.levelsCompleted[level - 1])
+       {
+           SceneManager.LoadScene("LevelTemplate");
+       }
+
    }
 }

@@ -20,6 +20,19 @@ public class Controller : MonoBehaviour
             data = SaveSystem.SaveExists(dataFileName)
             ? SaveSystem.LoadData<Data>(dataFileName)
             : new Data();
+            
+            IconHandler.instance.LoadStars();
+            IconHandler.instance.SetLockIcons();
+            instance.SetStarText();
+            
+    }
+
+    public void SetStarText()
+    {
+        if (starText != null)
+        {
+            instance.starText.text = instance.data.stars.ToString();
+        }
     }
 
     private void OnDestroy()
