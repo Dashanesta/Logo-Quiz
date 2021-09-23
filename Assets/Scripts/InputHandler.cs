@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Threading.Tasks;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -41,7 +42,7 @@ public class InputHandler : MonoBehaviour
         return levelsCompletedInt;
     }
     
-    public void OnInput()
+    public async void OnInput()
     {
         var data = Controller.instance.data;
         input = inputField.text;
@@ -52,6 +53,10 @@ public class InputHandler : MonoBehaviour
             data.levelsCompleted[SceneChanger.level] = true;
             Stars();
             data.stars = Stars();
+            
+            await Task.Delay(1000);
+            
+            SceneChanger.instance.Back();
         }
         else
         {

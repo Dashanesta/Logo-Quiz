@@ -5,34 +5,16 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LogoLoader: MonoBehaviour
+public class LogoLoader : MonoBehaviour
 {
-   // public static LogoLoader instance;
-   // public void Awake() => instance = this;
+    public Image logo;
+    public Sprite[] logos;
 
     private void Start()
     {
-        if (SceneChanger.level == 0)
+        if (logo != null)
         {
-            McDonalds();
+            logo.sprite = logos[SceneChanger.level];
         }
-        
-        if (SceneChanger.level == 1)
-        {
-            Starbucks();
-        }
-    }
-
-    public Image logo;
-    public Sprite[] logos;
-    
-    public void McDonalds() // 0
-    {
-        logo.sprite = logos[0];
-    }
-    
-    public void Starbucks() // 1
-    {
-        logo.sprite = logos[1];
     }
 }
